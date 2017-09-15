@@ -1,0 +1,35 @@
+extends layouts/base
+
+block bonushead
+	title cococuouocuuc
+
+mixin blabla(param1)
+	p truc du tableau: #{param1}
+block body
+	span coucou
+	a(href="#") testgrtghrthr
+	img(src="/public/images/stormblood.jpg")
+	p.
+		foez,foezof,oenjgigrjeirjreigo goreoihgjorgjepor
+		reigkfoezjfijeozrjogfij
+		irgknjoirngjporineignjrjikhnjtkihnjij
+		#{tab}
+	for element in tab
+		+blabla(element)
+
+	if video_list.length > 0
+		script.
+			function change_video(video_name){
+				document.getElementById('lecteur').src=encodeURI("/public/videos/"+video_name);
+				document.getElementById('titre_vid').innerHTML=video_name.replace(".mp4","");
+
+				return false;
+			}
+		h1(id="titre_vid") #{video_list[0].replace(".mp4","")}
+		video(id="lecteur" src="/public/videos/"+video_list[0] controls width="100%")
+
+		for video_name in video_list
+			a(href="/public/videos/"+video_name, onclick="return change_video('"+video_name+"');") #{video_name}
+			br
+
+	p #{starttime}

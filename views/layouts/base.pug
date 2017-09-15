@@ -1,0 +1,38 @@
+doctype
+html
+	head
+		base(href='/')
+		title=serverName + ' - ' + pagetitle
+		link(rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css")
+		meta(charset='utf-8')
+		block bonushead
+
+	body
+		.container
+			nav.navbar.navbar-inverse
+				.container-fluid
+					.navbar-header
+						button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar")
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") #{serverName}
+						.collapse.navbar-collapse(id="myNavbar")
+						ul.nav.navbar-nav
+							li.active #[a(href="#") Accueil]
+							li #[a(href="#") Patrimoine]
+							span.caret
+							li #[a(href="#") Hôtels]
+							li #[a(href="#") Restaurants] 
+						ul.nav.navbar-nav.navbar-right
+							li
+								a(href="#")
+									span.glyphicon.glyphicon-log-in Se connecter
+
+			block body
+
+		footer
+			- endtime = new Date();
+			- loadtime = endtime.getTime() - starttime.getTime();
+
+			p Temps de chargement : #{loadtime}

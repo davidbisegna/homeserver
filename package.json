@@ -1,0 +1,23 @@
+{
+  "name": "homeserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidbisegna/homeserver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidbisegna/homeserver/issues"
+  },
+  "homepage": "https://github.com/davidbisegna/homeserver",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.3"
+  }
+}
